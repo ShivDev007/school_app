@@ -9,5 +9,5 @@ def shivam():
     return "this is our shivam's Page"
 
 if __name__=='__main__':
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0")
 
