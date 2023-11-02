@@ -2,7 +2,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 @app.route("/")
-def Main():
+def main():
     return render_template('index.html')
 @app.route('/shivam')
 def shivam():
