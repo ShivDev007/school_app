@@ -9,7 +9,7 @@ body {
 /* Header styles */
 header {
   background-color: #000609;
-  color: #fff;
+  color: #05f7e3;
   text-align: center;
   padding: 20px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.511);
@@ -37,7 +37,7 @@ p {
 
 /* Footer styles */
 footer {
-  background-color: #230e54;
+  background-color: #5005fe;
   color: #fff;
   text-align: center;
   padding: 10px 0;
