@@ -1,29 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../static/styles.css">
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Add this line to your HTML <head> section to include Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <title>Your Profile</title>
 </head>
-
 <body>
-  <marquee><center>
-  <h1>Welcome To Our School
-</h1></marquee>
+    <header>
+        <div class="header-container">
+            <div class="profile-image">
+                <img src="../static/profile2.jfif" alt="Your Profile Image">
+            </div>
+            <div class="profile-info">
+                <h1>Shivam Sharma</h1>
+                <p>DevOps Engineer</p>
+                <p>Haryana(gurgaon)</p>
+            </div>
+        </div>
+    </header>
+    <!-- Add more sections here -->
 
-  <div class="container">
-    <div class="box animate__animated animate__rubberBand animate__fast animate__infinite	infinite">Parm</div>
-    <div class="box animate__animated animate__rubberBand animate__infinite infinite">ParmJeetJailwal</div>
-    <div class="box animate__animated animate__rubberBand animate__infinite	infinite">Sanjay Atal</div>
-    <center><div><h1>The End</h1></div></center>
+
+    <!-- ... (previous HTML code) -->
+
+<section class="about-section">
+  <div class="about-container">
+      <h2>About Me</h2>
+      <p>Seeking a challenging DevOps Engineer role where I can utilize my experience       
+         in automation, cloud infrastructure, and
+        containerization technologies to drive continuous integration and delivery, improve scalability, and ensure high availability of
+        systems.
+      </p>
   </div>
-  </center>
-</body>
+</section>
 
+<!-- ... (footer section comes next) -->
+
+
+<!-- ... (previous HTML code) -->
+
+<section class="footer-section">
+  <div class="footer-container">
+      <p>Contact me at <a href="mailto:your@email.com">shivamsharma2695@gmail.com</a></p>
+  </div>
+</section>
+    <footer>
+        <div class="footer-container">
+            <p>Contact me at shivamsharma2695@gmail.com</p>
+        </div>
+    </footer>
+</body>
 </html>
