@@ -27,8 +27,8 @@ header {
 .skill-card {
     display: inline-block;
     width: 150px;
-    background-color: #333;
-    color: #fff;
+    background-color: #d9f505;
+    color: #060404;
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
@@ -36,7 +36,7 @@ header {
 }
 
 .skill-card:hover {
-    background-color: #05f83e; /* Green neon glow color */
+    background-color: #05f83e67; /* Green neon glow color */
     transform: scale(1.1);
     color:black;
 }
@@ -66,9 +66,9 @@ header {
 .project-card {
     width: 300px;
     margin: 0 auto;
-    background-color: #200303;
+    background-color: #9af706;
     color: #fff;
     border-radius: 10px;
     padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.664);
 }
