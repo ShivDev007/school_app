@@ -1,74 +1,213 @@
-/* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Use Lato font */
 body {
-    font-family: Arial, sans-serif;
-}
-
-/* Header Styles */
-header {
+    font-family: 'Lato', sans-serif;
+  }
+  
+  /* Add a background image */
+  .bg-image {
+    background-image: url("https://source.unsplash.com/1600x900/?nature");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+  
+  /* Add a dark overlay to the background image */
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+  }
+  
+  /* Add some padding and center alignment to the container */
+  .container {
+    padding: 50px;
     text-align: center;
-    background-color: #d0eb03;
-    color: #020000;
+  }
+  
+  /* Style the profile image */
+  .profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the name and bio */
+  .name {
+    font-size: 40px;
+    font-weight: 900;
+    color: white;
+    margin-top: 20px;
+  }
+  
+  .bio {
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+    margin-top: 10px;
+  }
+  
+  /* Style the social icons */
+  .social-icons {
+    margin-top: 30px;
+  }
+  
+  .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 25px;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #007bff;
+  }
+  
+  /* Style the skills section */
+  #skills {
+    background-color: white;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-/* Skills Section Styles */
-.skills {
-    text-align: center;
-    padding: 20px;
-}
-
-.skill-card {
-    display: inline-block;
-    width: 150px;
-    background-color: #d9f505;
-    color: #060404;
-    border-radius: 10px;
+  }
+  
+  #skills h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  #skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #skills li {
+    font-size: 20px;
+    font-weight: 300;
+    color: #333;
     margin: 10px;
     padding: 10px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.skill-card:hover {
-    background-color: #05f83e67; /* Green neon glow color */
-    transform: scale(1.1);
-    color:black;
-}
-
-/* Details Section Styles */
-.details {
-    text-align: center;
-    padding: 20px;
-}
-
-.detail-card {
-    width: 300px;
-    margin: 0 auto;
-    background-color: #333;
-    color: #fff;
+    border: 2px solid #007bff;
     border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-/* Projects Section Styles */
-.projects {
-    text-align: center;
+  }
+  
+  /* Style the projects section */
+  #projects {
+    background-color: #f0f0f0;
     padding: 20px;
-}
-
-.project-card {
+  }
+  
+  #projects h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .project {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  .project img {
     width: 300px;
-    margin: 0 auto;
-    background-color: #9af706;
-    color: #fff;
-    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .project h3 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .project p {
+    font-size: 15px;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .project a {
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    background-color: #007bff;
     padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.664);
-}
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .project a:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style the education section */
+  #education {
+    background-color: white;
+    padding: 20px;
+  }
+  
+  #education h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .education {
+    margin: 10px;
+  }
+  
+  .education h3 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .education p {
+    font-size: 15px;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Add media queries for responsiveness */
+  @media screen and (max-width: 768px) {
+    .profile-img {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .name {
+      font-size: 30px;
+    }
+  
+    .bio {
+      font-size: 15px;
+    }
+  
+    #skills li {
+      font-size: 15px;
+      margin: 5px;
+      padding: 5px;
+    }
+  
+    .project {
+      flex-direction: column;
+    }
+  
+    .project img {
+      width: 100%;
+      height: auto;
+      margin: 0 0 10px 0;
+    }
+  }
+  
