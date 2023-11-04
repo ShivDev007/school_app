@@ -1,0 +1,73 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Skills Section Styles */
+.skills {
+    text-align: center;
+    padding: 20px;
+}
+
+.skill-card {
+    display: inline-block;
+    width: 150px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.skill-card:hover {
+    background-color: #28a745; /* Green neon glow color */
+    transform: scale(1.1);
+}
+
+/* Details Section Styles */
+.details {
+    text-align: center;
+    padding: 20px;
+}
+
+.detail-card {
+    width: 300px;
+    margin: 0 auto;
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Projects Section Styles */
+.projects {
+    text-align: center;
+    padding: 20px;
+}
+
+.project-card {
+    width: 300px;
+    margin: 0 auto;
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

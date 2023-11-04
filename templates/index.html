@@ -1,77 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <!-- Add this line to your HTML <head> section to include Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
-    <style>
-        body {
-            background: linear-gradient(90deg, #FFD700, #000);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .card {
-            background: linear-gradient(45deg, #FFD700, #000);
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            color: #FFF;
-            padding: 20px;
-            text-align: center;
-            animation: neon-glow 1.5s infinite alternate;
-        }
-
-        .profile-image img {
-            border-radius: 50%;
-            border: 3px solid #FFD700;
-        }
-
-        .animate__animated {
-            animation-duration: 1s;
-        }
-
-        @keyframes neon-glow {
-            0% {
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 0 10px #FFD700, 0 0 20px #FFD700;
-            }
-            100% {
-                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5), 0 0 15px #FFD700, 0 0 30px #FFD700;
-            }
-        }
-    </style>
-
-    <title>Your Profile</title>
+    <link rel="stylesheet" href="../static/styles.css">
 </head>
 <body>
-    <div class="card animate__animated animate__fadeIn">
-        <div class="profile-image">
-            <img src="../static/profile2.jfif" alt="Your Profile Image">
+    <header>
+        <h1>Your Name</h1>
+        <p>Web Developer | Designer</p>
+    </header>
+
+    <section class="skills">
+        <h2>Skills</h2>
+        <div class="skill-card">
+            <div class="skill-icon">
+                <i class="fas fa-code"></i>
+            </div>
+            <h3>Web Development</h3>
         </div>
-        <div class="profile-info">
-            <h1>Shivam Sharma</h1>
-            <p>DevOps Engineer</p>
-            <p>Haryana(gurgaon)</p>
+        <!-- Add more skill cards as needed -->
+    </section>
+
+    <section class="details">
+        <h2>Details</h2>
+        <div class="detail-card">
+            <h3>Name: Your Name</h3>
+            <p>Email: your@email.com</p>
+            <p>Location: Your City, Country</p>
         </div>
-    </div>
+    </section>
 
-    <!-- Add more card-style sections here -->
-
-    <div class="card about-card animate__animated animate__fadeIn">
-        <h2>About Me</h2>
-        <p>Seeking a challenging DevOps Engineer role where I can utilize my experience in automation, cloud infrastructure, and containerization technologies to drive continuous integration and delivery, improve scalability, and ensure high availability of systems.</p>
-    </div>
-
-    <!-- ... (footer section comes next) -->
-
-    <div class="card footer-card animate__animated animate__fadeIn">
-        <p>Contact me at <a href="mailto:your@email.com">shivamsharma2695@gmail.com</a></p>
-    </div>
+    <section class="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Project 1</h3>
+            <p>Description of Project 1</p>
+        </div>
+        <!-- Add more project cards as needed -->
+    </section>
 </body>
 </html>
