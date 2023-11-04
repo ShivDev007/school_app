@@ -1,0 +1,91 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+/* Add a background image */
+.bg-image {
+    background-image: url("https://source.unsplash.com/1600x900/?nature");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+/* Add a dark overlay to the background image */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
+/* Add some padding and center alignment to the container */
+.container {
+    padding: 50px;
+    text-align: center;
+}
+/* Style the profile image */
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 2px 10px rgba(24, 26, 5, 0.635);
+    transition: 0.8s;
+}
+.profile-img:hover{
+    box-shadow: 0 2px 10px rgba(164, 232, 3, 0.872);
+    transition:0.8s;
+}
+/* Style the name and bio */
+.name {
+    font-size: 40px;
+    font-weight: 900;
+    color: white;
+    margin-top: 20px;
+    transition: 0.7s;
+}
+.name:hover{
+    color: color-mix(in hsl shorter hue, color percentage, color percentage);
+    text-shadow: 0 2px 10px rgba(219, 230, 10, 0.756);
+    transition: 0.67s;
+}
+.bio {
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+    margin-top: 10px;
+    transition: 0.7s;
+}
+.bio:hover{
+    background-color: rgba(250, 235, 215, 0.445);
+    border-radius: 20px;
+    transition: 0.7s;
+    display:flexbox;
+}
+/* Style the social icons */
+.social-icons {
+    margin-top: 30px;
+}
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 25px;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    color: #4b037b;
+}
+/* Add media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .profile-img {
+      margin: 0 auto;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+@media screen and (max-width: 768px) {
+    .name {
+        font-size: 30px;
+    }
+    .bio {
+        font-size: 15px;
+    }
+}
