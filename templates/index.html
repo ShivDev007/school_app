@@ -1,39 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>My Tech Blog</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        .header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-        .blog-post {
-            max-width: 700px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-        }
-        .blog-post h2 {
-            margin-top: 0;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..static/styles.css">
 </head>
 <body>
-    <div class="header">
-        <h1>My Tech Blog</h1>
-    </div>
-    <div class="blog-post">
-        <h2>Blog Post Title</h2>
-        <p>This is where the blog post content will go...</p>
-    </div>
+    <header class="header">
+        <div class="container">
+            <h1>My Tech Blog</h1>
+            <form class="search-form">
+                <input type="search" placeholder="Search">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <article class="blog-post">
+                <div class="featured-image">
+                    <img src="https://picsum.photos/700/200" alt="Blog post image">
+                </div>
+
+                <h2>Blog Post Title</h2>
+                <p>This is where the blog post content will go...</p>
+            </article>
+
+            <article class="blog-post">
+                <div class="featured-image">
+                    <img src="https://picsum.photos/700/201" alt="Blog post image">
+                </div>
+
+                <h2>Another Blog Post Title</h2>
+                <p>This is where the blog post content will go...</p>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 My Tech Blog</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
