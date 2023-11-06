@@ -1,32 +1,39 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>My Profile Page</title>
-    <link href="../static/styles.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
-    
+    <title>My Tech Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .blog-post {
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+        .blog-post h2 {
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body>
-    <div class="bg-image">
-        <div class="overlay">
-            <div class="container">
-                <img src="../static/profile2.jfif" alt="Profile Image" class="profile-img animate__animated animate__wobble animate__duration-2s">
-                <h1 class="name animate__animated animate__rollIn animate__delay-2s">Shivam Sharma (DevOps Engineer)</h1>
-                <p class="bio animate__animated animate__flipInX animate__delay-3s">I am a DevOps Engineer. I love to create highly available Infrastrucute for my clients. i love to perform automation and deployment of the microservices.</p>
-                <div class="social-icons">
-                    <a href="#" class="animate__animated animate__bounceInRight animate__delay-2s"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="animate__animated animate__bounceInLeft"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="animate__animated animate__bounceInRight"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="animate__animated animate__flip"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            
-        </div>
+    <div class="header">
+        <h1>My Tech Blog</h1>
+    </div>
+    <div class="blog-post">
+        <h2>Blog Post Title</h2>
+        <p>This is where the blog post content will go...</p>
     </div>
 </body>
 </html>
