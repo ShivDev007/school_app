@@ -1,9 +1,55 @@
-<!DOCTYPE html>
+/**<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>My Tech Blog</title>
+    <title> Tech Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/styles.css">
+    <style>
+        /* The animation code */
+        @keyframes slide-in {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* The element to apply the animation to */
+        .blog-post {
+            animation-name: slide-in;
+            animation-duration: 1s;
+            animation-fill-mode: backwards;
+        }
+
+        .featured-image img {
+            animation-name: fade-in;
+            animation-duration: 2s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        /* Add some hover effects */
+        .blog-post:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transform: scale(1.05);
+            transition: all 0.3s;
+        }
+
+        .blog-post:hover .featured-image img {
+            filter: grayscale(100%);
+            transition: all 0.3s;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -18,32 +64,29 @@
 
     <main class="main">
         <div class="container">
+            <!-- Loop through the posts parameter and display each blog post -->
+            {% for post in posts %}
             <article class="blog-post">
                 <div class="featured-image">
-                    <img src="https://picsum.photos/700/200" alt="Blog post image">
+                    <img src="{{ post[2] }}" alt="Blog post image">
                 </div>
 
-                <h2>Blog Post Title</h2>
+                <h2>{{ post[1] }}</h2>
                 <p>This is where the blog post content will go...</p>
             </article>
-
-            <article class="blog-post">
-                <div class="featured-image">
-                    <img src="https://picsum.photos/700/201" alt="Blog post image">
-                </div>
-
-                <h2>Another Blog Post Title</h2>
-                <p>This is where the blog post content will go...</p>
-            </article>
+            {% endfor %}
         </div>
     </main>
 
+
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2023 My Tech Blog</p>
+            <p>© 2023 My Tech Blog</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
+
+

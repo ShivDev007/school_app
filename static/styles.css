@@ -12,10 +12,17 @@ body {
 
 /* Header */
 .header {
-    background-color: #333;
+    background-color: #00000094;
     color: #fff;
     padding: 10px;
     text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.822);
+    transition: 0.5s;
+}
+.header:hover{
+    background-color: rgba(218, 216, 212, 0.32);
+    color: black;
+    transition: 0.5s;
 }
 
 .header h1 {
@@ -35,7 +42,7 @@ body {
 
 .header .search-form button {
     padding: 5px 10px;
-    background-color: #337ab7;
+    background-color: #371305;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -83,4 +90,49 @@ body {
 
 .blog-post p {
     font-size: 20px;
+}
+
+
+
+/* Add some margin and padding to the form elements */
+form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 20%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00a0d2;
+    color: white;
+    font-weight: bold;
+}
+
+/* Change the color of the button on hover */
+button:hover {
+    background-color: #008cb2;
+    cursor: pointer;
+}
+
+/* Add some hover effects to the form */
+form:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+    transition: all 0.3s;
 }
