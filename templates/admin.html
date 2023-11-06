@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+
+    <style>
+        /* The animation code */
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* The element to apply the animation to */
+form {
+    animation-name: slide-in;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+}
+
+button {
+    animation-name: fade-in;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* Add some hover effects */
+form:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+
+button:hover {
+    filter: grayscale(100%);
+    transition: all 0.3s;
+}
+</style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Admin Page</h1>
+            <a href="/">Back to Home</a>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <h2>Add a New Blog Post</h2>
+            <!-- Create a form to submit the title and image URL of the new blog post -->
+            <form action="/add" method="POST">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="image">Image URL:</label>
+                <input type="url" id="image" name="image" required>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2023 My Tech Blog</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
