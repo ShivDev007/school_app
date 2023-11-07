@@ -22,7 +22,7 @@ app = Flask(__name__)
 
 # Create a MySQL database connection object
 db = mysql.connector.connect(
-    host="65.0.183.157",
+    host="3.110.209.36",
     user="root",
     password="root",
     database="blog"
