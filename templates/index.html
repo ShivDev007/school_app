@@ -1,53 +1,54 @@
-/**<!DOCTYPE html>
 <html lang="en">
 <head>
     <title> Tech Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/styles.css">
     <style>
-        /* The animation code */
-        @keyframes slide-in {
-            from {
-                transform: translateX(-100%);
-            }
-            to {
-                transform: translateX(0);
-            }
+        /* Define the grid layout for the main element */
+        .main {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Create as many columns as possible with a minimum width of 200px */
+            grid-template-rows: 200px; /* Set the row height to 200px */
+            grid-gap: 10px; /* Add some space between the grid items */
         }
 
-        @keyframes fade-in {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* The element to apply the animation to */
+        /* Style the blog posts */
         .blog-post {
-            animation-name: slide-in;
-            animation-duration: 1s;
-            animation-fill-mode: backwards;
+            position: relative; /* Make the overlay position relative to the blog post */
+            overflow: hidden; /* Hide the overflow of the blog post */
         }
 
+        /* Style the featured images */
         .featured-image img {
-            animation-name: fade-in;
-            animation-duration: 2s;
-            animation-delay: 1s;
-            animation-fill-mode: forwards;
+            width: 100%; /* Set the image width to 100% of the blog post */
+            height: 100%; /* Set the image height to 100% of the blog post */
+            object-fit: cover; /* Make the image cover the blog post without stretching or cropping */
         }
 
-        /* Add some hover effects */
-        .blog-post:hover {
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            transform: scale(1.05);
-            transition: all 0.3s;
+        /* Style the overlay */
+        .overlay {
+            position: absolute; /* Make the overlay position absolute */
+            top: 0; /* Align the overlay to the top of the blog post */
+            left: 0; /* Align the overlay to the left of the blog post */
+            width: 100%; /* Set the overlay width to 100% of the blog post */
+            height: 100%; /* Set the overlay height to 100% of the blog post */
+            background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black background to the overlay */
+            display: flex; /* Use flexbox to center the overlay content */
+            align-items: center; /* Vertically center the overlay content */
+            justify-content: center; /* Horizontally center the overlay content */
+            opacity: 0; /* Set the overlay opacity to 0 (invisible) */
+            transition: opacity 0.3s; /* Add a smooth transition for the overlay opacity */
         }
 
-        .blog-post:hover .featured-image img {
-            filter: grayscale(100%);
-            transition: all 0.3s;
+        /* Style the overlay text */
+        .overlay span {
+            color: white; /* Set the overlay text color to white */
+            font-size: 20px; /* Set the overlay text size to 20px */
+        }
+
+        /* Show the overlay on hover */
+        .blog-post:hover .overlay {
+            opacity: 1; /* Set the overlay opacity to 1 (visible) */
         }
     </style>
 </head>
@@ -70,9 +71,7 @@
                 <div class="featured-image">
                     <img src="{{ post[2] }}" alt="Blog post image">
                 </div>
-
-                <h2>{{ post[1] }}</h2>
-                <p>This is where the blog post content will go...</p>
+                <div class="overlay"><span>{{ post[1] }}</span></div> <!-- Add the overlay with the blog post title -->
             </article>
             {% endfor %}
         </div>
@@ -88,5 +87,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
